@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\nCREATE DATABASE companydb;\nUSE companydb;\n\nCREATE TABLE employess(\n    EmployeeId INT,\n    FirstName VARCHAR(25),\n    LastName VARCHAR(50),\n    Email VARCHAR(100),\n    HireDate DATE,\n    Salary DECIMAL(10,2)\n);\nINSERT INTO employess VALUES \n(1, 'John', 'Doe', 'john.doe@example.com', '2020-01-15', 60000.00),\n(2, 'Jane', 'Smith', 'jane.smith@example.com', '2019-03-22', 75000.00),\n(3, 'Alice', 'Johnson', 'alice.johnson@example.com', '2021-07-30', 50000.00),\n(4, 'Bob', 'Brown', 'bob.brown@example.com', '2018-11-12', 65000.00);\nSELECT * FROM employess;\nINSERT INTO employess VALUES (5, 'Krish',NULL,'Krishnaik06@gmail.com',Null, 55000.00 );\nSELECT * FROM employess;\n\n## Retrive values wchich are having null VALUES\n\nSELECT * FROM employess WHERE LastName is NULL OR HireDate IS NULL;\nUPDATE employess SET LastName=\"Naik\" WHERE EmployeeId =5;\nSELECT * FROM employess;\nDROP TABLE employess;\n\n\nCREATE TABLE employess(\n    EmployeeId INT PRIMARY KEY,\n    FirstName VARCHAR(25),\n    LastName VARCHAR(50),\n    Email VARCHAR(100),\n    HireDate DATE,\n    Salary DECIMAL(10,2)\n);\nINSERT INTO employess VALUES \n(1, 'John', 'Doe', 'john.doe@example.com', '2020-01-15', 60000.00),\n(2, 'Jane', 'Smith', 'jane.smith@example.com', '2019-03-22', 75000.00),\n(3, 'Alice', 'Johnson', 'alice.johnson@example.com', '2021-07-30', 50000.00),\n(4, 'Bob', 'Brown', 'bob.brown@example.com', '2018-11-12', 65000.00);\n\nINSERT INTO employess VALUES (5, 'Krish',NULL,'Krishnaik06@gmail.com',Null, 55000.00 );\nSELECT * FROM employess;\n\nUPDATE employess SET LastName=\"Naik\" WHERE EmployeeId =5;\n\nUPDATE employess SET Salary=800000 WHERE EmployeeId =5;\nSELECT * FROM employess;\nDELETE FROM employess WHERE EmployeeId=1;\nDELETE FROM employess WHERE Salary < 60000;\nSELECT * FROM employess;\n## add column to an existing TABLE\nUSE companydb;\nALTER TABLE employess ADD COLUMN phone_number VARCHAR(25);\n\nALTER TABLE employess ADD COLUMN middle_man VARCHAR(25), ADD COLUMN date_of_birth DATE;\nSELECT * FROM employess;\nALTER TABLE employess MODIFY COLUMN phone_number VARCHAR(20);\nALTER TABLE employess MODIFY COLUMN Salary INT;\nINSERT INTO employess VALUES (6, 'Krish',NULL,'Krishnaik06@gmail.com',Null, 55000,'666666666', 'V', '1989-09-09' );\nSELECT * FROM employess;\n## change column name\n\nALTER TABLE employess CHANGE COLUMN middle_man middleName VARCHAR(25);\nSELECT * FROM employess;\nALTER TABLE employess DROP COLUMN date_of_birth;\nCREATE TABLE customer_info(\n    id int AUTO_INCREMENT PRIMARY KEY,\n    first_name VARCHAR(25),\n    last_name VARCHAR(25),\n    salary INT\n);\nSELECT * FROM customer_info;\nINSERT INTO customer_info(first_name, last_name, salary) VALUES\n(\"John\", \"J\", 10000),\n(\"Jo\", \"Jaa\", 566472),\n(\"Jon\", \"Jsfg\", 10),\n(\"Joh\", \"Jadffa\", 10257);\nSELECT * FROM customer_info;\nSELECT first_name, last_name FROM customer_info where salary>40000;\nUPDATE customer_info set salary= 60000 WHERE id=5;\nSELECT * FROM customer_info;\n",
+    "content": "\\about\nCREATE DATABASE companydb;\nUSE companydb;\n\nCREATE TABLE employess(\n    EmployeeId INT,\n    FirstName VARCHAR(25),\n    LastName VARCHAR(50),\n    Email VARCHAR(100),\n    HireDate DATE,\n    Salary DECIMAL(10,2)\n);\nINSERT INTO employess VALUES \n(1, 'John', 'Doe', 'john.doe@example.com', '2020-01-15', 60000.00),\n(2, 'Jane', 'Smith', 'jane.smith@example.com', '2019-03-22', 75000.00),\n(3, 'Alice', 'Johnson', 'alice.johnson@example.com', '2021-07-30', 50000.00),\n(4, 'Bob', 'Brown', 'bob.brown@example.com', '2018-11-12', 65000.00);\nSELECT * FROM employess;\nINSERT INTO employess VALUES (5, 'Krish',NULL,'Krishnaik06@gmail.com',Null, 55000.00 );\nSELECT * FROM employess;\n\n## Retrive values wchich are having null VALUES\n\nSELECT * FROM employess WHERE LastName is NULL OR HireDate IS NULL;\nUPDATE employess SET LastName=\"Naik\" WHERE EmployeeId =5;\nSELECT * FROM employess;\nDROP TABLE employess;\n\n\nCREATE TABLE employess(\n    EmployeeId INT PRIMARY KEY,\n    FirstName VARCHAR(25),\n    LastName VARCHAR(50),\n    Email VARCHAR(100),\n    HireDate DATE,\n    Salary DECIMAL(10,2)\n);\nINSERT INTO employess VALUES \n(1, 'John', 'Doe', 'john.doe@example.com', '2020-01-15', 60000.00),\n(2, 'Jane', 'Smith', 'jane.smith@example.com', '2019-03-22', 75000.00),\n(3, 'Alice', 'Johnson', 'alice.johnson@example.com', '2021-07-30', 50000.00),\n(4, 'Bob', 'Brown', 'bob.brown@example.com', '2018-11-12', 65000.00);\n\nINSERT INTO employess VALUES (5, 'Krish',NULL,'Krishnaik06@gmail.com',Null, 55000.00 );\nSELECT * FROM employess;\n\nUPDATE employess SET LastName=\"Naik\" WHERE EmployeeId =5;\n\nUPDATE employess SET Salary=800000 WHERE EmployeeId =5;\nSELECT * FROM employess;\nDELETE FROM employess WHERE EmployeeId=1;\nDELETE FROM employess WHERE Salary < 60000;\nSELECT * FROM employess;\n## add column to an existing TABLE\nUSE companydb;\nALTER TABLE employess ADD COLUMN phone_number VARCHAR(25);\n\nALTER TABLE employess ADD COLUMN middle_man VARCHAR(25), ADD COLUMN date_of_birth DATE;\nSELECT * FROM employess;\nALTER TABLE employess MODIFY COLUMN phone_number VARCHAR(20);\nALTER TABLE employess MODIFY COLUMN Salary INT;\nINSERT INTO employess VALUES (6, 'Krish',NULL,'Krishnaik06@gmail.com',Null, 55000,'666666666', 'V', '1989-09-09' );\nSELECT * FROM employess;\n## change column name\n\nALTER TABLE employess CHANGE COLUMN middle_man middleName VARCHAR(25);\nSELECT * FROM employess;\nALTER TABLE employess DROP COLUMN date_of_birth;\nCREATE TABLE customer_info(\n    id int AUTO_INCREMENT PRIMARY KEY,\n    first_name VARCHAR(25),\n    last_name VARCHAR(25),\n    salary INT\n);\nSELECT * FROM customer_info;\nINSERT INTO customer_info(first_name, last_name, salary) VALUES\n(\"John\", \"J\", 10000),\n(\"Jo\", \"Jaa\", 566472),\n(\"Jon\", \"Jsfg\", 10),\n(\"Joh\", \"Jadffa\", 10257);\nSELECT * FROM customer_info;\nSELECT first_name, last_name FROM customer_info where salary>40000;\nUPDATE customer_info set salary= 60000 WHERE id=5;\nSELECT * FROM customer_info;\nALTER TABLE customer_info ADD COLUMN dob DATE;\nDESC customer_info;\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,11 +15,11 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 85,
+                    "lineNumber": 87,
                     "column": 1
                 },
                 "position": {
-                    "lineNumber": 85,
+                    "lineNumber": 87,
                     "column": 1
                 }
             }
@@ -27,10 +27,10 @@
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 78,
+                "lineNumber": 82,
                 "column": 1
             },
-            "firstPositionDeltaTop": -18
+            "firstPositionDeltaTop": 111
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -2951,7 +2951,7 @@
                         }
                     ]
                 },
-                "currentHeight": 29,
+                "currentHeight": 28,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -3439,6 +3439,224 @@
             "state": {
                 "start": 85,
                 "end": 85,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "fcc18888-d694-4953-8828-d16fd4353ba0",
+                            "content": "OK, 0 records retrieved in 27.334ms"
+                        }
+                    ]
+                },
+                "currentHeight": 29,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 46
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 86,
+                "end": 86,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "306dfeaf-8f68-468c-dd0b-1bebcd602220"
+                    ]
+                },
+                "currentHeight": 204.546875,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 19
+                        },
+                        "contentStart": 1,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "6699f906-6e03-4cb3-8674-5c115d79df02",
+                    "resultId": "306dfeaf-8f68-468c-dd0b-1bebcd602220",
+                    "rows": [
+                        {
+                            "0": "id",
+                            "1": "int",
+                            "2": "NO",
+                            "3": "PRI",
+                            "4": null,
+                            "5": "auto_increment"
+                        },
+                        {
+                            "0": "first_name",
+                            "1": "varchar(25)",
+                            "2": "YES",
+                            "3": "",
+                            "4": null,
+                            "5": ""
+                        },
+                        {
+                            "0": "last_name",
+                            "1": "varchar(25)",
+                            "2": "YES",
+                            "3": "",
+                            "4": null,
+                            "5": ""
+                        },
+                        {
+                            "0": "salary",
+                            "1": "int",
+                            "2": "YES",
+                            "3": "",
+                            "4": null,
+                            "5": ""
+                        },
+                        {
+                            "0": "dob",
+                            "1": "date",
+                            "2": "YES",
+                            "3": "",
+                            "4": null,
+                            "5": ""
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Field",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Type",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Null",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Key",
+                            "field": "3",
+                            "dataType": {
+                                "type": 43,
+                                "needsQuotes": true
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Default",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Extra",
+                            "field": "5",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 5 records retrieved in 1.011ms"
+                    },
+                    "totalRowCount": 5,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "DESC customer_info",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 87,
+                "end": 87,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
