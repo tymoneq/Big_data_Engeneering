@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\nCREATE DATABASE SchoolDB;\n\nUSE SchoolDB;\n\nCREATE TABLE Students(\n    StudentId INT,\n    Firstname VARCHAR(25),\n    Lastname VARCHAR(25),\n    BirthDate DATE\n);\nCREATE TABLE Course(\n    courseId INT,\n    Coursname VARCHAR(25),\n    Department VARCHAR(25)\n)\n",
+    "content": "\n\nCREATE DATABASE SchoolDB;\nUSE SchoolDB;\n\nCREATE TABLE Students(\n    StudentId INT,\n    Firstname VARCHAR(25),\n    Lastname VARCHAR(25),\n    BihtDate DATE\n);\nCREATE TABLE Course(\n    courseId INT,\n    Coursname VARCHAR(25),\n    Department VARCHAR(25)\n)\nINSERT INTO Students(StudentId, Firstname, Lastname, BithDate) VALUES\n(1,'Krish','Naik','2024-09-09'),\n(2,'Krish1','Naik1','2024-09-10');\n\nSELECT * FROM Students\nINSERT INTO Course \nVALUES\n(101,'Introduction to Stats','Statistics'),\n(102,'Data Science','Data Analytics');\n\n\n\nSELECT * FROM Course\n\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,22 +15,22 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 15,
-                    "column": 27
+                    "lineNumber": 22,
+                    "column": 20
                 },
                 "position": {
-                    "lineNumber": 15,
-                    "column": 27
+                    "lineNumber": 22,
+                    "column": 20
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 1,
+                "lineNumber": 12,
                 "column": 1
             },
-            "firstPositionDeltaTop": 0
+            "firstPositionDeltaTop": 34
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -41,7 +41,7 @@
         {
             "state": {
                 "start": 1,
-                "end": 1,
+                "end": 2,
                 "language": "mysql",
                 "result": {
                     "type": "text",
@@ -53,17 +53,17 @@
                         }
                     ]
                 },
-                "currentHeight": 134,
+                "currentHeight": 28,
                 "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
                         "span": {
                             "start": 0,
-                            "length": 6
+                            "length": 1
                         },
-                        "contentStart": 0,
-                        "state": 0
+                        "contentStart": -1,
+                        "state": 3
                     }
                 ]
             },
@@ -71,27 +71,24 @@
         },
         {
             "state": {
-                "start": 2,
+                "start": 3,
                 "end": 3,
                 "language": "mysql",
                 "result": {
                     "type": "text",
                     "text": [
                         {
-                            "type": 2,
+                            "type": 0,
                             "index": 0,
-                            "resultId": "b1b6cf97-aba0-448d-8471-c8605f277458",
-                            "content": "OK, 1 row affected in 6.928ms"
-                        },
-                        {
-                            "type": 2,
-                            "index": 1,
-                            "resultId": "bfc9c6e9-54a7-4fb1-da5a-f2a88f229f41",
-                            "content": "OK, 0 records retrieved in 0.617ms"
+                            "content": "MySQL Error (1007): Can't create database 'SchoolDB'; database exists",
+                            "language": "ansi"
                         }
-                    ]
+                    ],
+                    "executionInfo": {
+                        "text": ""
+                    }
                 },
-                "currentHeight": 50,
+                "currentHeight": 28,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -107,7 +104,7 @@
                         "delimiter": ";",
                         "span": {
                             "start": 25,
-                            "length": 1
+                            "length": 0
                         },
                         "contentStart": 24,
                         "state": 3
@@ -127,8 +124,8 @@
                         {
                             "type": 2,
                             "index": 0,
-                            "resultId": "4a133498-30bd-4b8a-d7ed-64d0b5b62d14",
-                            "content": "OK, 0 records retrieved in 0.476ms"
+                            "resultId": "8c14c8bb-89de-41e4-8126-c9ec05725dc8",
+                            "content": "OK, 0 records retrieved in 0.449ms"
                         },
                         {
                             "type": 0,
@@ -157,7 +154,7 @@
                         "delimiter": ";",
                         "span": {
                             "start": 13,
-                            "length": 118
+                            "length": 117
                         },
                         "contentStart": 15,
                         "state": 0
@@ -175,12 +172,15 @@
                     "type": "text",
                     "text": [
                         {
-                            "type": 2,
+                            "type": 0,
                             "index": 0,
-                            "resultId": "910b41a8-58b5-4cc7-8278-7247886a7674",
-                            "content": "OK, 0 records retrieved in 28.924ms"
+                            "content": "MySQL Error (1050): Table 'Course' already exists",
+                            "language": "ansi"
                         }
-                    ]
+                    ],
+                    "executionInfo": {
+                        "text": ""
+                    }
                 },
                 "currentHeight": 29,
                 "currentSet": 1,
@@ -201,7 +201,338 @@
         {
             "state": {
                 "start": 17,
-                "end": 17,
+                "end": 20,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "ee91e21c-601a-46f7-e168-73ec93db3644",
+                            "content": "OK, 2 rows affected in 5.778ms"
+                        }
+                    ]
+                },
+                "currentHeight": 29,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 137
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 137,
+                            "length": 1
+                        },
+                        "contentStart": 136,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 21,
+                "end": 21,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "5d40b3bf-5383-4e77-ce8a-7a5d5b0cdb5f"
+                    ]
+                },
+                "currentHeight": 177.4375,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 22
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "e009d1cb-c329-4df9-f3bc-dba11a521bf7",
+                    "resultId": "5d40b3bf-5383-4e77-ce8a-7a5d5b0cdb5f",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Krish",
+                            "2": "Naik",
+                            "3": null
+                        },
+                        {
+                            "0": 2,
+                            "1": "Krish1",
+                            "2": "Naik1",
+                            "3": null
+                        },
+                        {
+                            "0": 1,
+                            "1": "Krish",
+                            "2": "Naik",
+                            "3": "2024-09-09"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Krish1",
+                            "2": "Naik1",
+                            "3": "2024-09-10"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "StudentId",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Firstname",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Lastname",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "BithDate",
+                            "field": "3",
+                            "dataType": {
+                                "type": 27,
+                                "needsQuotes": true
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 4 records retrieved in 1.134ms"
+                    },
+                    "totalRowCount": 4,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM Students",
+                    "updatable": false,
+                    "fullTableName": "Students"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 22,
+                "end": 28,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "e6f13ada-97f0-4a72-fe94-2dcb39f42a7f",
+                            "content": "OK, 2 rows affected in 8.904ms"
+                        }
+                    ]
+                },
+                "currentHeight": 29,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 109
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 109,
+                            "length": 3
+                        },
+                        "contentStart": 108,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 29,
+                "end": 30,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "c5d8703e-5057-42f2-a1cf-f87165b8b44d"
+                    ]
+                },
+                "currentHeight": 123.21875,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 21
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "e009d1cb-c329-4df9-f3bc-dba11a521bf7",
+                    "resultId": "c5d8703e-5057-42f2-a1cf-f87165b8b44d",
+                    "rows": [
+                        {
+                            "0": 101,
+                            "1": "Introduction to Stats",
+                            "2": "Statistics"
+                        },
+                        {
+                            "0": 102,
+                            "1": "Data Science",
+                            "2": "Data Analytics"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "courseId",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Coursname",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Department",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 1.512ms"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM Course\n",
+                    "updatable": false,
+                    "fullTableName": "Course"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 31,
+                "end": 31,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
