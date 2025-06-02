@@ -1,0 +1,6 @@
+Hello, World!
+I'm learning Python file handling.
+Appending a new line to the file.
+This is the first line.
+This is the second line.
+This is the third line.
