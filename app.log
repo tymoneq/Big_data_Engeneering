@@ -1,0 +1,6 @@
+2025-06-06 08:07:53-DEBUG-This is a debug message
+2025-06-06 08:07:53-INFO-This is an info message
+2025-06-06 08:07:53-WARNING-This is a warning message
+2025-06-06 08:07:53-ERROR-This is an error message
+2025-06-06 08:07:53-CRITICAL-This is a critical message
+2025-06-06 08:07:53-INFO-Adding 5 and 10
